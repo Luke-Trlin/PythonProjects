@@ -1,0 +1,64 @@
+def NumberInput(prompt): # Number Input w/ error handling
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid Number, Try Again")
+
+
+
+def OperatorInput(): # Operator Input w/ error handling
+    while True:
+        Operator = input("Which Operator (+, -, *, /) ")
+        if Operator in ["+", "-", "*", "/"]:
+            return Operator
+        else:
+            print("Invalid Operator")
+
+
+
+
+
+def calculation():
+    num1 = NumberInput("What Is Your First Number ")
+    Operator = OperatorInput()
+    num2 = NumberInput("What Is Your Second Number ")
+
+
+    # Operator Functionality
+    if Operator == "+":
+        result = num1 + num2
+
+    elif Operator == "-":
+        result = num1 - num2
+
+    elif Operator == "*":
+        result = num1 * num2
+
+    elif Operator == "/":
+        if num2 == 0:
+            result = "Cant Divide By 0"
+            
+        else:
+            result = num1 / num2
+
+    else:
+        result = "Invalid Operator"
+
+    return(result)
+
+    
+
+def Replay(): # Replay Loop
+    while True:
+        result = calculation() # Call Calculation Function
+        print(result)
+        ReplayCheck = input("Would You Like To Replay? (y/n) ").lower() # Replay Access
+        if ReplayCheck == "n":
+            print("Thanks For Playing")
+            break # End Loop
+        
+
+
+
+Replay() # Start Program
