@@ -3,3 +3,4 @@ Current Projects
   - Calculator (generic)
   - Highest Number Finder
   - Grade Calculator
+  - Guessing Game
