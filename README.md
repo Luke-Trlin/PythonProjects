@@ -1,3 +1,5 @@
 # PythonProjects
 Current Projects
-  - Calculator
+  - Calculator (generic)
+  - Highest Number Finder
+  - Grade Calculator
